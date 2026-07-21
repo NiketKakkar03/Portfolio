@@ -4,7 +4,7 @@ import Reveal from "@/components/Reveal";
 import Tag from "@/components/Tag";
 
 export const metadata: Metadata = {
-  title: "Experience — Niket Kakkar",
+  title: "Experience - Niket Kakkar",
 };
 
 export default function ExperiencePage() {
@@ -16,7 +16,7 @@ export default function ExperiencePage() {
         </h1>
         <p className="text-muted mt-3 max-w-xl">
           BASc Computer Engineering (ML specialization), Queen&apos;s
-          University, April 2026. International Engineering Award ($40,000).
+          University, April 2026.
         </p>
       </Reveal>
 
@@ -28,7 +28,7 @@ export default function ExperiencePage() {
               <p className="font-mono text-xs text-muted">{job.period}</p>
               <h2 className="text-xl font-semibold mt-1">{job.role}</h2>
               <p className="text-muted text-sm">
-                {job.company} · {job.location}
+                {job.company} - {job.location}
               </p>
               <ul className="mt-3 space-y-2 text-sm text-foreground/80 list-disc list-inside marker:text-accent/60">
                 {job.points.map((pt) => (

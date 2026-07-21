@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
-import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Niket Kakkar — Software & ML Engineer",
+  title: "Niket Kakkar - Software & ML Engineer",
   description:
     "Portfolio of Niket Kakkar: software and machine learning engineer in Toronto working on LLM infrastructure (MCP) and physical AI.",
 };
@@ -36,7 +35,6 @@ export default function RootLayout({
         <main className="flex-1 w-full max-w-4xl mx-auto px-6 pt-28 pb-16">
           {children}
         </main>
-        <Footer />
       </body>
     </html>
   );

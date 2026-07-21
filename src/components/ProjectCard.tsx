@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import type { Project } from "@/lib/data";
+import { projectFields, type Project } from "@/lib/data";
 import Tag from "@/components/Tag";
 
 export default function ProjectCard({
@@ -11,6 +11,8 @@ export default function ProjectCard({
   project: Project;
   index?: number;
 }) {
+  const field = projectFields.find((item) => item.id === project.field);
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 24 }}
@@ -21,9 +23,16 @@ export default function ProjectCard({
       className="group rounded-xl border border-border bg-card p-6 flex flex-col gap-3 transition-colors hover:border-accent/40"
     >
       <div className="flex items-start justify-between gap-4">
-        <h3 className="text-lg font-semibold group-hover:text-accent transition-colors">
-          {project.name}
-        </h3>
+        <div className="min-w-0">
+          {field && (
+            <p className="mb-2 font-mono text-xs uppercase tracking-wider text-accent">
+              {field.label}
+            </p>
+          )}
+          <h3 className="text-lg font-semibold group-hover:text-accent transition-colors">
+            {project.name}
+          </h3>
+        </div>
         {project.repo && (
           <a
             href={project.repo}
@@ -32,7 +41,7 @@ export default function ProjectCard({
             aria-label={`${project.name} on GitHub`}
             className="text-muted hover:text-accent transition-colors shrink-0 font-mono text-sm"
           >
-            code ↗
+            code -&gt;
           </a>
         )}
       </div>

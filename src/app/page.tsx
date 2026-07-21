@@ -33,7 +33,7 @@ export default function Home() {
         className="pt-16 flex flex-col gap-5"
       >
         <motion.p variants={item} className="font-mono text-sm text-accent">
-          {profile.location} · open to SWE / ML / robotics roles
+          {profile.location} - open to SWE / ML / robotics roles
         </motion.p>
         <motion.h1
           variants={item}
@@ -49,13 +49,29 @@ export default function Home() {
           connecting LLMs to enterprise compliance data, and led the autonomy
           subsystem of a Mars-rover team.
         </motion.p>
-        <motion.div variants={item} className="flex gap-4 pt-2">
+        <motion.div variants={item} className="flex flex-wrap gap-3 pt-2">
           <Link
             href="/projects"
             className="rounded-lg bg-accent text-background px-5 py-2.5 text-sm font-medium hover:opacity-90 transition-opacity"
           >
             See projects
           </Link>
+          <a
+            href={profile.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg border border-accent/50 px-5 py-2.5 text-sm font-medium text-accent hover:bg-accent-dim transition-colors"
+          >
+            LinkedIn
+          </a>
+          <a
+            href={profile.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg border border-border px-5 py-2.5 text-sm hover:border-accent/50 hover:text-accent transition-colors"
+          >
+            GitHub
+          </a>
           <a
             href={`mailto:${profile.email}`}
             className="rounded-lg border border-border px-5 py-2.5 text-sm hover:border-accent/50 hover:text-accent transition-colors"
@@ -74,7 +90,7 @@ export default function Home() {
               href="/projects"
               className="text-sm text-muted hover:text-accent transition-colors"
             >
-              all projects →
+              all projects -&gt;
             </Link>
           </div>
         </Reveal>
@@ -93,7 +109,7 @@ export default function Home() {
             className="block h-full rounded-xl border border-border bg-card p-6 hover:border-accent/40 transition-colors group"
           >
             <h3 className="font-semibold group-hover:text-accent transition-colors">
-              Experience →
+              Experience -&gt;
             </h3>
             <p className="text-sm text-muted mt-2">
               MCP servers in production, autonomous rovers, security ML, and
@@ -107,7 +123,7 @@ export default function Home() {
             className="block h-full rounded-xl border border-border bg-card p-6 hover:border-accent/40 transition-colors group"
           >
             <h3 className="font-semibold group-hover:text-accent transition-colors">
-              About / Now →
+              About / Now -&gt;
             </h3>
             <p className="text-sm text-muted mt-2">
               Currently going deep on physical AI: VLA models, LeRobot, and
