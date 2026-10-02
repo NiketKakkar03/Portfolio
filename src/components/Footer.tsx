@@ -2,8 +2,8 @@ import { profile } from "@/lib/data";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border">
-      <div className="max-w-4xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-muted">
+    <footer className="site-footer">
+      <div className="footer-inner">
         <p>
           © {new Date().getFullYear()} {profile.name} · {profile.location}
         </p>

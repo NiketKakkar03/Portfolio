@@ -34,7 +34,7 @@ export const experience: Experience[] = [
     role: "Autonomous Subsystem Lead",
     company: "Queen's Space Engineering Team",
     location: "Kingston, ON",
-    period: "May 2025 - Apr 2026",
+    period: "Sep 2025 - Apr 2026",
     points: [
       "Led a 10-member team building an autonomous rover on ROS 2; architected the Python/C++ stack integrating LIDAR, camera, and IMU data for autonomous navigation.",
       "Trained YOLOv8 object-detection models on collected rover data, enabling accurate obstacle identification to support safe autonomous navigation during testing.",
@@ -46,7 +46,7 @@ export const experience: Experience[] = [
     role: "Software Engineer Intern",
     company: "Cywift",
     location: "London, UK (Remote)",
-    period: "Apr 2025 - Jul 2025",
+    period: "May 2025 - Aug 2025",
     points: [
       "Engineered a multithreaded ETL pipeline with data-quality validation in Python and MySQL, parallelizing ingestion and transformation to cut processing latency 10% across production data loads.",
       "Built a custom protocol server using Anthropic's MCP SDK in Python, exposing a GRC platform's governance layer as a tool API and integrating the platform with downstream clients.",
